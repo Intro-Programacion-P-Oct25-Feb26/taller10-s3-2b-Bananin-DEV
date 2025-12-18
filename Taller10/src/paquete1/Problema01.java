@@ -24,7 +24,7 @@ public class Problema01 {
         };
 
         String[] estudiantes = {"Ana", "Luis", "Carlos", "María"};
-        int[]diasAsistidos = new int[6];
+        int[]diasAsistidos = new int[4];
         String reporte = "";
         String condicion = "";
         
