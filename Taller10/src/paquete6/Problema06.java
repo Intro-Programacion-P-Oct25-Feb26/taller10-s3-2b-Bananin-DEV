@@ -12,27 +12,27 @@ package paquete6;
 public class Problema06 {
 
     public static void main(String[] args) {
-        String[][] estudiantes = {{"Sarah Ward", "Philip Payne"},
-        {"Carrie Burton", "Lauren Rice"},
-        {"Emma Escobar", "Lori Flores"},
-        {"Steven West", "Toni Martin"}};
 
-        String acumulador = "";
+        double[][] dato1 = {{1, 2, 3}, {6, 8, 9}};
+        double[][] dato2 = {{10, 1, 2}, {10, 9, 1}};
 
-        for (int i = 0; i < estudiantes.length; i++) {
-            for (int j = 0; j < estudiantes[i].length; j++) {
+        double[][] resultado = new double[2][3];
 
-                String nombre = estudiantes[i][j];
-                char letra = Character.toLowerCase(nombre.charAt(0));
+        String salida = "";
 
-                switch (letra) {
-                    case 's':
-                    case 'p':
-                    case 't':
-                        acumulador = acumulador + nombre + "\n";
-                        break;
+        for (int i = 0; i < resultado.length; i++) {
+            for (int j = 0; j < resultado[i].length; j++) {
+                if (dato1[i][j] < dato2[i][j]) {
+                    resultado[i][j] = dato1[i][j];
+                } else {
+                    resultado[i][j] = dato2[i][j];
                 }
+                salida += resultado[i][j] + " ";
             }
+            salida += "\n";
         }
+
+        System.out.println(salida);
     }
+
 }

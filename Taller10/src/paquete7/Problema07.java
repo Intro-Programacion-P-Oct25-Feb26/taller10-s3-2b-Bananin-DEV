@@ -16,7 +16,7 @@ public class Problema07 {
         double[][] matrizX = new double[3][3];
         double[][] matrizA = new double[3][3];
         double[][] matrizB = new double[3][3];
-        boolean seCumpleEnLaMatriz = true;
+        boolean cumpleCondicion = true;
 
   
         for (int fila = 0; fila < matrizX.length; fila++) {
@@ -43,14 +43,14 @@ public class Problema07 {
         for (int fila = 0; fila < matrizX.length; fila++) {
             for (int columna = 0; columna < matrizX[fila].length; columna++) {
                 if (matrizA[fila][columna] != matrizB[fila][columna]) {
-                    seCumpleEnLaMatriz = false;
+                    cumpleCondicion = false;
                     break; 
                 }
             }
         }
 
-        System.out.println("\n--- Resultado del Análisis ---");
-        if (seCumpleEnLaMatriz) {
+        System.out.println("\n--Reporte final--");
+        if (cumpleCondicion) {
             System.out.println("La identidad algebraica se cumple en todos los elementos.");
         } else {
             System.out.println("La identidad algebraica no se cumple en algunos elementos.");
